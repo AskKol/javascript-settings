@@ -2,7 +2,6 @@ package JavaScript.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
 import jetbrains.buildServer.configs.kotlin.v2017_2.buildSteps.script
-import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 object JavaScript_Template : Template({
     uuid = "1aedc5fc-0482-4eb9-87f3-81c6202a593c"
@@ -26,12 +25,5 @@ object JavaScript_Template : Template({
             scriptContent = "yarn test -- --single-run --browsers %Browser% --colors false --reporters teamcity"
         }
         stepsOrder = arrayListOf("RUNNER_6", "RUNNER_7")
-    }
-
-    triggers {
-        vcs {
-            id = "vcsTrigger"
-            branchFilter = ""
-        }
     }
 })
