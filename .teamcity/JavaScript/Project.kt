@@ -15,6 +15,7 @@ object Project : Project({
 
     vcsRoot(JavaScript_HttpsGithubComG0t4teamcityCourseCardsGit)
 
+    buildType(JavaScript_02InternetExplorer)
     buildType(JavaScript_03DeployToStaging)
     buildType(JavaScript_01FastTest)
     buildType(JavaScript_02Chrome)
