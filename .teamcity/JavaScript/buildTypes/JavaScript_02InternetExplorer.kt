@@ -9,7 +9,7 @@ object JavaScript_02InternetExplorer : BuildType({
     name = "02.Internet-Explorer"
 
     params {
-        param("Browser", "IE")
+        param("Browser", "Edge")
     }
 
     dependencies {
