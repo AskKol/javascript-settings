@@ -1,6 +1,7 @@
 package JavaScript.buildTypes
 
 import jetbrains.buildServer.configs.kotlin.v2017_2.*
+import jetbrains.buildServer.configs.kotlin.v2017_2.triggers.vcs
 
 object JavaScript_03DeployToStaging : BuildType({
     uuid = "5dd6199d-06a1-47c4-83b4-51c27c33d9d0"
@@ -10,6 +11,12 @@ object JavaScript_03DeployToStaging : BuildType({
     vcs {
         root(JavaScript.vcsRoots.JavaScript_HttpsGithubComG0t4teamcityCourseCardsGit)
 
+    }
+
+    triggers {
+        vcs {
+            branchFilter = ""
+        }
     }
 
     dependencies {
