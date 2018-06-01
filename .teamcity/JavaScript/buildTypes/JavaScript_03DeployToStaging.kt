@@ -17,7 +17,7 @@ object JavaScript_03DeployToStaging : BuildType({
     steps {
         script {
             name = "IIS Deploy"
-            scriptContent = """rmdir /S /Q \inetpub\wwwroot xcopy /S /I /Y app \inetpub\wwwroot\"""
+            scriptContent = """rmdir /S /Q \inetpub\wwwroot xcopy /S /Y app \inetpub\wwwroot\"""
         }
     }
 
