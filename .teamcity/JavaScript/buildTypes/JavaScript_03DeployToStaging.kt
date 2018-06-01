@@ -17,7 +17,7 @@ object JavaScript_03DeployToStaging : BuildType({
     steps {
         script {
             name = "IIS Deploy"
-            scriptContent = """rmdir /S /Q \inetpub\wwwroot xcopy /S /Y app \inetpub\wwwroot\"""
+            scriptContent = """ROBOCOPY .\app C:\inetpub\wwwroot\javascriptcards\ *.* /E /MIR /NP IF %%ERRORLEVEL%% LEQ 3 set errorlevel=0 IF %%ERRORLEVEL%% LEQ 0 EXIT /b %%ERRORLEVEL%% EXIT 0"""
         }
     }
 
