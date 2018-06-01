@@ -11,4 +11,8 @@ object JavaScript_01FastTest : BuildType({
     params {
         param("Browser", "PhantomJS")
     }
+
+    vcs {
+        cleanCheckout = true
+    }
 })
