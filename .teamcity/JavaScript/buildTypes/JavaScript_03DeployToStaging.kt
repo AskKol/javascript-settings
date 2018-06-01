@@ -17,7 +17,7 @@ object JavaScript_03DeployToStaging : BuildType({
     steps {
         script {
             name = "IIS Deploy"
-            scriptContent = """ROBOCOPY .\app C:\inetpub\wwwroot\javascriptcards\ *.* /E /MIR /XD IF %%ERRORLEVEL%% LEQ 2 exit 0"""
+            scriptContent = """(ROBOCOPY .\app C:\inetpub\wwwroot\javascriptcards\ *.* /E /MIR /XD)^& IF %%ERRORLEVEL%% LSS 8 SET errorlevel=0"""
         }
     }
 
